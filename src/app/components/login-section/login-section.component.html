@@ -1,0 +1,54 @@
+<div class="content_section">
+    <div class="title_section">Sign in</div>
+    <div class="description_section">
+        If you don’t have an account register<br/>
+        You can <span>Register here !</span>
+    </div>
+    <ng-container *ngTemplateOutlet="form_login"></ng-container>
+</div>
+
+<ng-template #form_login>
+    <div class="form_loging">
+        <div class="form_field">
+            <label for="email">Email</label>
+            <div class="input_form">
+                <img src="assets/images/email.png" alt="email">
+                <input type="text" placeholder="Enter your email address">
+            </div>
+        </div>
+        <div class="form_field">
+            <label for="password">Password</label>
+            <div class="input_form">
+                <img src="assets/images/lock.png" alt="lock">
+                <div class="password">
+                    <input [type]="type" placeholder="Enter your Password">
+                    <div class="sufix">
+                        @if (type === password) {
+                            <img src="assets/images/unvisible.png" alt="unvisible" (click)="changeVisible()">
+                        }@else {
+                            <img src="assets/images/visible.png" alt="visible" (click)="changeVisible()">
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form_actions">
+            <div class="remember">
+                <input type="checkbox" id="check">
+                <label for="check">Remember me</label>
+            </div>
+            <div class="forgot">
+                <span>Forgot Password ?</span>
+            </div>
+        </div>
+        <div class="section_button">
+            <app-button label="Login" type="btn-primary"/>
+        </div>
+        <div class="recomended">
+            <span>or continue with</span>
+        </div>
+        <div class="section_social_media">
+            <app-social-media />
+        </div>
+    </div>
+</ng-template>

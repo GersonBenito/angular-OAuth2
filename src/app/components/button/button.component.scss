@@ -1,0 +1,37 @@
+@mixin type_button($p: 8px, $width: auto, $bg: none, $c: none, $bc, $s: 16px, $w: 400, $r: 10px){
+    width: $width;
+    background: $bg;
+    color: $c;
+    font-size: $s;
+    font-weight: $w;
+    border-radius: $r;
+    border: 1px solid $bc !important;
+    padding: $p;
+}
+
+.content_button{
+    button{
+        border: none;
+        outline: none;
+        letter-spacing: 0.1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.btn-primary{
+    @include type_button($p: 8px, $width: 100%, $bg: #FF432A, $c: #FFF, $bc: #FF432A)
+}
+
+.btn-facebook{
+    @include type_button($p: 12px, $bg:#FFFFFF, $bc:#0866FF, $r: 12px)
+}
+
+.btn-apple{
+    @include type_button($p: 12px, $bg:#000000, $bc:#000000, $r: 12px)
+}
+
+.btn-google{
+    @include type_button($p: 12px, $bg:#FFFFFF, $bc:#72747B, $r:12px)
+}

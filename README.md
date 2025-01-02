@@ -1,6 +1,9 @@
-# AngularOAuth2
+# Angular OAuth2
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+
+![image-web](src/assets/readme/presentation-login-web.png)
+![image-movil](src/assets/readme/presentation-login-movil.png)
 
 ## Development server
 
